@@ -25,5 +25,5 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):   # emailë¡œ ë
     def get_token(cls, user):
         token = super().get_token(user)
         token['name'] = user.email
-
+        token['token_message'] = 'sparta_time_attack'
         return token
